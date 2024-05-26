@@ -1,3 +1,40 @@
-h1{
-	color: red;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap');
+
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url('BgDev.png');
+	background-size: cover; 
+	background-repeat: no-repeat; 
+	background-position: center center; 
+	background-color: red;
+}
+
+.nombre {
+	font-family: "Jacquard 12", system-ui;
+	font-size: 70px;
+	text-align: center;
+	color:  rgb(241, 46, 21);
+}
+
+@media (max-width: 450px) {
+body {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-size: cover; 
+		background-repeat: no-repeat; 
+		background-position: center; 
+		background-color: blue;
+}
+
+.nombre {
+			font-size: 50px;
+			text-align: center;
+			color: rgb(43, 116, 226);
+		}
+}
