@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,10 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css"/>
     <title> ~ [Portafolio] | LaloTGx</title>
+    <link rel="icon" href="Icono.png" type="image/png">
 </head>
 <body>
-    <div class="content">
-   <div class="nombre">LaloTGx</div>
-   </div>
+<!-- El comienzo o intro de la pagina -->
+    <div id="intro" class="intro">
+        <div class="sprite"></div>
+    </div>
+ 
+<!-- Contenedor de toda la paguna -->
+    <div id="main-content" class="container" style="display: none;">
+        <!-- muestra la imagen de perfil -->
+        <nav class="glass-nav">
+            <div class="nombre">LaloTGx</div>
+                <img src="perfil.jpg" alt="Imagen de perfil" class="circle-image">
+                <!-- Botones de Contacto del Perfil -->
+                <div class="contact-info">
+                    <div class="info-item">
+                        <img src="Ubi.png" class="ubi-image" onclick="copyToClipboard('Contla de Juan Cuamatazi, Tlaxcala')" title="Contla de Juan Cuamatazi, Tlaxcala">
+                       <div class="ubicacion">
+                        Contla de Juan Cuamatazi, Tlaxcala
+                       </div>
+                    </div>
+                    <div class="info-item">
+                        <img src="telefono.png" class="ubi-image" onclick="copyToClipboard('+52-246-121-6494')" title="Teléfono: +52-246-121-6494">
+                        <div class="telefono">
+                            +52-246-121-6494
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <img src="correo.png" class="ubi-image" onclick="copyToClipboard('lalo.tg@outlook.com')" title="Correo electrónico: lalo.tg@outlook.com">
+                        <div class="correo">
+                            lalo.tg@outlook.com
+                        </div>
+                    </div>
+                </div>
+                
+        </nav>
+
+            <div class="contacerca">
+                <div class="acercade">
+                Acerca de mi
+            </div>
+                <div class="Eu">
+                <p>Hola! me fascina el desarrollo de los videojuegos como tambien me llama la atención </p>
+                </div>
+            </div>
+    
+    </div>
+
+    <!-- script de la intro de la pagina -->
+    <script src="animacion.js"></script>
 </body>
 </html>
