@@ -103,9 +103,9 @@ function getContentById(contentId) {
                     <img src="icoHCJ.png" class="miHCJ">
                         <div class="tHCJ">HMTL, CSS, JavaScript</div>
                         <div class="progress-bar">
-                        <div class="progress" style="width: 70%;"></div>
+                        <div class="progress" style="width: 65%;"></div>
                         </div>
-                        <span>70%</span>
+                        <span>65%</span>
                         </div>
                         <div class="titucono">Experiencia en Desarrollo</div>
                         <li class="mitem" style="color: #94a1cd;">Desarrollo Frontend (nativo)</li>
