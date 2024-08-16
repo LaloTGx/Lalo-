@@ -251,14 +251,15 @@ font-size: clamp(0.5rem, 2vw, 1.6rem);
     border-radius: 1.5rem;
     z-index: 1;
     top: 0;
-    height: 33.3%;
-    width: auto;
+    height: auto;
+    width: 100%;
 }
 
 .acerca .descripcion {
     color: #98b9cb;
     margin:  1px 20px 20px 20px;
-    font-size: clamp(0.1rem, 2vw, 1rem);
+    font-size: clamp(0.1rem, 2vw, 1.3rem);
+    margin: 2rem;
 }
 
 /*---------------------------------------------------------------------------------------------------*/
@@ -279,6 +280,7 @@ font-size: clamp(0.5rem, 2vw, 1.6rem);
     width: 50%;
     height: auto;
     left: 0;
+    margin-top: 1rem;
 }
 
 .lenguajes:hover {
@@ -425,6 +427,7 @@ flex-wrap: wrap;
     right: 0;
     z-index: 1;
     cursor: pointer;
+    margin-top: 1rem;
 }
 
 .educacion:hover {
@@ -462,7 +465,7 @@ flex-wrap: wrap;
 }
 
 .cursos:hover {
-    transform: scale(1.02);
+    transform: scale(1.1);
 }
 
 .cursos .titu{
@@ -644,6 +647,7 @@ flex-wrap: wrap;
 
 .mitem {
     margin-left: 1.2rem;
+    font-size: clamp(0.8rem, 2.5vw, 1rem); 
 }
 
 /* ==================================================== */
@@ -734,7 +738,7 @@ flex-wrap: wrap;
     overflow-y: auto;
     z-index: 4;
     height: 20rem;
-    width: 20rem;
+    width: 30rem;
 }
 /* ========================================================== */
 .contmain {
@@ -757,7 +761,6 @@ height: 100%;
     flex-direction: row;
     width: 100%;
     height: 33.3%;
-    margin-top: 1rem;
 }
 
 .contapp {
@@ -804,7 +807,6 @@ height: 100%;
             flex-direction: column;
             width: 100%;
             height: auto;
-            margin-top: 1rem;
         }
     
         .contapp {
@@ -901,10 +903,6 @@ height: 100%;
         font-size: clamp(1.5rem, 2vw, 1rem);
     }
     /* ---------------------------------------------------------------------------- */
-    .acerca {
-        height: 35vh;
-    }
-    
     .acerca .descripcion {
         margin:  1px 20px 20px 20px;
         font-size: clamp(0.9rem, 2vw, 1rem);
@@ -1058,5 +1056,14 @@ height: 100%;
 
     .tedoo{
         font-size: clamp(1.4rem, 2vw, 1.6rem);
+    }
+    /* ----------------------------------------------------------------- */
+    .custom-modal-content {
+        height: 18rem;
+        width: 20rem;
+    }
+    
+    .mitem {
+        font-size: clamp(0.8rem, 2vw, 1rem);
     }
 }
