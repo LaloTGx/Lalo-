@@ -25,6 +25,7 @@ function showYouTubeModal(videoId, contentId) {
 
     iframe.src = `https://www.youtube.com/embed/${videoId}`;
     
+    // Inserta contenido personalizado basado en el ID
     const content = getContentById(contentId);
     modalBody.innerHTML = content;
 
@@ -35,12 +36,15 @@ function showCustomModal(contentId) {
     const modal = document.getElementById('custom-modal');
     const modalBody = document.getElementById('custom-modal-body');
 
+    // Inserta el contenido basado en el identificador
     const content = getContentById(contentId);
     modalBody.innerHTML = content;
 
+    // Muestra el modal
     modal.style.display = 'flex';
 }
 
+// Función para obtener el contenido personalizado
 function getContentById(contentId) {
     switch (contentId) {
         case 'dpa-content':
@@ -103,9 +107,9 @@ function getContentById(contentId) {
                     <img src="icoHCJ.png" class="miHCJ">
                         <div class="tHCJ">HMTL, CSS, JavaScript</div>
                         <div class="progress-bar">
-                        <div class="progress" style="width: 65%;"></div>
+                        <div class="progress" style="width: 70%;"></div>
                         </div>
-                        <span>65%</span>
+                        <span>70%</span>
                         </div>
                         <div class="titucono">Experiencia en Desarrollo</div>
                         <li class="mitem" style="color: #94a1cd;">Desarrollo Frontend (nativo)</li>
@@ -117,14 +121,19 @@ function getContentById(contentId) {
             <div>
             <div class="lc" style=" cursor: default;">
                 <img src="icoc.png"class="mic">
-                    <div class="tC">C#</div>
+                    <div class="tC">C# (Unity)</div>
                     <div class="progress-bar">
                     <div class="progress" style="width: 70%;"></div>
                     </div>
                     <span>70%</span>
                     </div>
                     <div class="titucono">Experiencia en Desarrollo</div>
-                    <li class="mitem" style="color: #94a1cd;">Desarrollo de juegos (Unity)</li>
+                    <li class="mitem" style="color: #94a1cd;">Desarrollo de juegos de plataformas en 2D</li>
+                    <li class="mitem" style="color: #94cdab;">Implementación de luces y normal maps para 2D</li>
+                    <li class="mitem" style="color: #94a1cd;">Programación de físicas y colisiones</li>
+                    <li class="mitem" style="color: #94cdab;">Diseño y programación de interfaces de usuario (UI)</li>
+                    <li class="mitem" style="color: #94a1cd;">Creación y manejo de animaciones</li>
+                    <li class="mitem" style="color: #94cdab;">Desarrollo de juegos en 3D (nivel básico)</li>
                     </div>
                     `;
                     case 'ljava-content':
@@ -140,18 +149,19 @@ function getContentById(contentId) {
                     </div>
                     <div class="titucono">Experiencia en Desarrollo</div>
                     <li class="mitem" style="color: #94a1cd;">Programación Orientada a Objetos</li>
-                    <li class="mitem" style="color: #94cdab;">Desarrollo de aplicaciones de escritorio con NetBeans</li>
+                    <li class="mitem" style="color: #94cdab;">Desarrollo de aplicaciones de escritorio</li>
                     <li class="mitem" style="color: #94a1cd;">Desarrollo móvil (Android SDK, Kotlin)</li>
                     </div>
                     `;
                     case 'const-content':
                         return `
-                        <div>
-                        <div class="cursos">
-                        <div class="titucono">Cursos</div>
-                        <li class="mitem" style="color: #94a1cd;">Accesibilidad básica, programando sistemas inclusivos 2021</li>        
-                        <li class="mitem" style="color: #94cdab;">Desarrollo Full Stack 2022</li>
-                        </div>
+                     <div>
+                    <div class="cursos">
+                    <div class="titucono">Cursos</div>
+                    </div>
+                    <li class="mitem" style="color: #94a1cd;">Accesibilidad básica, programando sistemas inclusivos 2021</li>        
+                    <li class="mitem" style="color: #94cdab;">Desarrollo Full Stack 2022</li>
+                    </div>
                 `;
         default:
             return `<p>Contenido no disponible.</p>`;
@@ -165,7 +175,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (event.target === youtubeModal) {
                 youtubeModal.style.display = 'none';
                 const iframe = document.getElementById('modal-iframe');
-                iframe.src = '';
+                iframe.src = ''; // Detener el video
             }
         });
     }
