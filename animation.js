@@ -191,7 +191,9 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // ---------------------------------------------------------------------------------
-document.getElementById('desplazar').addEventListener('click', function() {
+const elemento = document.getElementById('desplazar');
+
+elemento.addEventListener('click', function () {
     this.classList.toggle('mover');
 
     this.addEventListener('transitionend', () => {
@@ -199,4 +201,11 @@ document.getElementById('desplazar').addEventListener('click', function() {
     }, { once: true });
 });
 
+document.addEventListener('keydown', function () {
+    elemento.classList.toggle('mover');
+
+    elemento.addEventListener('transitionend', () => {
+        elemento.remove();
+    }, { once: true });
+});
 //---------------------------------------------------------------------------------
